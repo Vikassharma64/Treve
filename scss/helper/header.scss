@@ -1,0 +1,48 @@
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    .wrapper-sec {
+        @extend .alignCenter;
+        padding: 20px 0;
+        ul {
+            @extend .alignCenter;
+            li {
+               margin-left: 20px;
+                a {
+                    color: var(--white);
+                    font-size: $font18;
+                    font-weight: 400;
+                    padding: 12px 20px;
+                    &:hover {
+                        color: var( --orenge);
+                    }
+                }
+                &:last-child{
+                    background: var(--orenge);
+                    border-radius: 5px;
+                    padding: 12px 0;
+                    :hover{
+                        color: var(--white);
+                        background: var(--black);
+                        padding: 12px 20px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// responsive //
+@media screen and (max-width: 768px){
+    .container {
+        width: 100% ;
+        padding: 0 20px;
+    }
+    .wrapper-sec {
+        display: none !important;
+    }
+}
